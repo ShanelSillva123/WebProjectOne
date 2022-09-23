@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Job Application</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Methmini Pinsarani">
+    <meta name="description" content="Ceylon Textile Suppliers job application form ">
+    <meta name="keywords" content="job, ceylon textile suppliers, application">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="styles/style.css" rel="stylesheet" type="text/css" >
+    <script src="https://kit.fontawesome.com/5d641fad72.js" crossorigin="anonymous"></script>
+</head>	
+<body>
+    <header class="header">
+        <nav>                
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs Descriptions</a></li>
+                <li style=" text-decoration: overline 5px #266150;"><a href="apply.html">Job Application</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="enhancements.html">Enhancements</a></li>
+                <li><a href="mailto:103825905@student.swin.edu.au"><button type="button" id="emailbutton">E-mail</button></a></li>
+            </ul>
+        </nav>
+    </header>
+	<main>
+
+        <div class="applypage-main">
+                <div class="applypage-container">
+                    <div class="title">Job Application Page</div>
+                    <p id="result"></p>
+                    <p id="note">NOTE : If any form validations issues occur on the Date of birth, the submission will not go through...and please refresh the page</p>
+                    <!--Added 'name' attribute for data retrieval-->
+                    <form id="jobApplication" action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php" method="post" name="jobApplication" target="_blank">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <h3 class="details">Date of Birth</h3>
+                            <input type="text" name="dob" required id="dob" placeholder="dd/mm/yyyy" maxlength="10" title="/ mark is mandatory">
+                            <p id="DateError"></p>
+                        </div>
+                        <div class="input-box">
+                            <h3 class="details">Job referance number</h3>
+                            <input type="text" placeholder="Enter reference number" name="JRnum" maxlength="5" id="ref">
+                            <p id="RefError"></p>
+                        </div>
+                        <div class="input-box">
+                            <h3 class="details">First Name</h3>
+                            <input type="text" name="fname" placeholder="Enter first name"  maxlength="20" id="fName">
+                            <p id="fError"></p>
+                        </div>
+                        <div class="input-box">
+                            <h3 class="details">Last Name</h3>
+                            <input type="text" name="lname" placeholder="Enter last name"  maxlength="20" id="lName">
+                            <p id="lError"></p>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="gender-details">
+                        <h3 class="gender-title">Gender</h3>
+                        <div class="catergory">
+                            <label>
+                                <span class="radio-button" style="opacity: 1;"><input type="radio" name="gender" id="gradio1"></span>
+                                <h4 class="gender">Male</h4>
+                            </label>
+                            <label>
+                                <span class="radio-button" style="opacity: 1;"><input type="radio" name="gender" id="gradio2"></span>
+                                <h4 class="gender">Female</h4>
+                            </label> 
+                        </div>
+                    </div>
+                    <div class="user-details">
+                        <div class="input-box">
+                            <h3 class="details">Address line 1</h3>
+                            <input type="text" placeholder="Street " maxlength="40" id="addr1">
+                            <p id="addr1Error"></p>
+                        </div>
+                        <div class="input-box">
+                            <h3 class="details">Address Line 2</h3>
+                            <input type="text" placeholder="Town" id="addr2">
+                            <p id="addr2Error"></p>
+                        </div>
+                        
+                        <p id="ps"><br> P.S. Please enter the post code and press the 'sync' button to view the relevant state selections
+                        all state selections which are not related to the post code will be disabled.</p>
+
+
+                        <div class="input-box">
+                            <h3 class="details">Post Code</h3>
+                            <input type="text" name="pcode"  placeholder="Enter postcode" id="post" maxlength="5">
+                            <img src="./images/cloud.png" id="sync" title="Please click here to view relevant state options only"alt="cloud">
+                            <!--added button to sync the state with the post code-->
+                            <p id="postError"></p>
+                        </div>
+
+                        <div class="input-box">
+                            <h3 class="details">State</h3>
+                            <select name="choice" class="choose" id="state">
+                                <option value="" disable selected hidden>Select your state</option>
+                                <option value="VIC">VIC</option>
+                                <option value="NSW">NSW</option>
+                                <option value="QLD">QLD</option>
+                                <option value="NT">NT</option>
+                                <option value="WA">WA</option>
+                                <option value="SA">SA</option>
+                                <option value="TAS">TAS</option>
+                                <option value="ACT">ACT</option>
+                                
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <h3 class="details">E-mail</h3>
+                            <input type="text" name="mailaddr" placeholder="Enter email" id="mail">
+                            <p id="emailError"></p>
+                        </div>
+                        <div class="input-box">
+                            <h3 class="details">Contact number</h3>
+                            <input type="text" name="phonenum" placeholder="Enter contact number" id="contact">
+                            <p id="contactError"></p>
+                        </div>
+    
+                    </div>
+                    <div class="checkboxes">
+                        <div class="details"><h3>Skills</h3></div>
+                        <div class="skill">5 years or more experience in the field <input type="checkbox"  name="checkboxExperiance"></div>
+                        <div class="skill">At least degree level of education <input type="checkbox"  name="checkboxeducation"></div>
+                        <div class="skill">Worked on critical deadlines <input type="checkbox"  name="checkboxtimelimits"></div>
+                        <div class="skill">Experience in working as a team <input type="checkbox"  name="checkboxteams"></div>
+                        <div class="skill">Other <input type="checkbox"  name="checkboxother" id="other"></div>
+                        
+                    </div>
+                    <div class="otherskills">
+                        <div class="details"><h3>Other Skills </h3></div>
+                        <textarea rows="4" cols="50" placeholder="   Other skills that you posses" id="otherSkills"></textarea>
+                        <p id="otherSkillError"></p>
+                    </div>
+                    <div class="apply-button">
+                        <input type="submit" value="Apply" id="sub">
+                    </div>
+                    </form>             
+            </div>          
+
+
+        </div>
+		
+	</main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="index.html">Our services</a></li>
+                        <li><a href="jobs.html">Work with us</a></li>
+                    </ul> 
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul> 
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Materials</a></li>
+                    </ul> 
+                </div>
+                <div class="footer-col">
+                    <h4>Contact us</h4>
+                    <div class="social-links">
+                        <a href="www.facebook.com/methamphetamine69"><i class="fab fa-facebook-f"></i></a>
+                        <a href="www.instagram.com/methuu.x"><i class="fab fa-instagram"></i></a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="./Js/apply.js"></script>
+</body>
+</html>
+

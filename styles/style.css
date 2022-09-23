@@ -1,0 +1,978 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    scroll-behavior: smooth;
+}
+
+.header{
+    width: 100%;
+    height: 12vh;
+    padding: 0 10%;
+    background: #e8cebfce;
+    position: fixed;
+    z-index: 100;
+}
+
+.header-container{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* slideshow */
+.slideshow{
+    position: absolute;
+    top: -94%;
+    background-color: rgba(0, 0, 0, 0.884);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: -10;
+}
+
+.slideshow-item{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    opacity: 0;
+    animation: cycleImages 40s infinite;
+}
+
+.slideshow-item img{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    opacity: 95%;
+    animation: zoom 40s infinite;
+}
+
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img{
+    animation-delay: 0s;
+}
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img{
+    animation-delay: 10s;
+}
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img{
+    animation-delay: 20s;
+}
+.slideshow-item:nth-child(4),
+.slideshow-item:nth-child(4) img{
+    animation-delay: 30s;
+}
+
+@keyframes cycleImages{
+    28%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+    }
+}
+  
+  @keyframes zoom{
+    100%{
+        transform: scale(1.15);
+    }
+}
+
+
+.headertext {
+    margin-left: 52%;
+    margin-top: 2.8%;
+    transform: translate(-52%, 7%);
+    display: flex;
+    height: 88%;
+    align-items: center;
+    text-align: center;
+    font-size:22px;
+}
+
+.headertext h1{
+    color: white;
+    font-size: 55px;
+}
+
+.headertext p{
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+}
+#emailbutton{
+    width: 120px;
+    background-color: #266150;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+#emailbutton:hover{
+    background-color: #ddaf94;
+    color: #000000;
+    cursor: pointer;
+}
+#explore-button{
+    width: 180px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 0;
+    background: #266150;
+    border: none;
+    margin-top: 30px;
+    transition: 0.5s ease;
+}
+
+#explore-button a{
+    text-decoration: none;
+}
+
+#explore-button:hover{
+    background-color: #ddaf94ce;
+    cursor: pointer;
+}
+
+span{
+    opacity: 0;
+    transition: all 4s ease;
+}
+
+span.fade{
+    opacity: 1;
+}
+
+/*Nav bar*/
+nav{
+    position: absolute;
+    top: 0;
+    left: 16%;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 19px;
+    overflow: hidden;
+    text-align: left;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
+nav a:hover{
+    text-decoration: overline 5px #266150;
+    transition: 0.2s ease-in-out;
+}
+
+main{
+    background-color: #FDF8F5 ;
+}
+
+/*homepage */
+.homepagedescription{
+    background-color: #FDF8F5 ;
+}
+
+.homedescription{
+    width: 100%;
+    height: 170vh;
+    margin-top: 5%;
+    padding-top: 5%;
+    margin-bottom: 5%;
+}
+.section1 img{
+    width:50%;
+    float: left;
+    border-radius: 5px;
+}
+
+.section1-content{
+    margin-left: 60%;
+}
+
+.section2-content{
+    float: left;
+    width: 45%;
+}
+
+.section2 img{
+    margin-left: 5%;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.homedescription section{
+    display: block;
+    width: 90%;
+    padding: 0% 5% 0 5%;
+    margin-left: 5%;
+    height: 20vh;
+}
+
+
+.homedescription section h2{
+    font-size: 27px;
+}
+
+.homedescription section p{
+    font-size: 16px;
+}
+
+
+.homedescription p{
+    color: #000000;
+}
+
+.homedescription h2{
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/*about us page*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.aboutpage{
+    background-color: #fdf8f5;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+    height: 260vh;
+}
+
+section{
+    width: 100%;
+    min-height: 85vh;
+    background-color: #fdf8f5;
+    border-radius: 15px;
+}
+
+.content-section{
+    float: left;
+    width: 50%;
+    margin: 0 5% 0 5%;
+}
+
+.content-section h1{
+	font-size: 28px;
+    margin: 5% 0 0 5%;
+    color: #4f4846;
+}
+
+.content-section p{
+	margin: 5%;;
+	color:#266150;
+	font-size: 18px;
+}
+
+
+.image-section{
+    width: 40%;
+    float: right;
+    margin-top: 9%;
+}
+
+.image-section img{
+	width: 70%;
+	height: auto;
+    position: relative;
+    border-radius: 5px;
+}
+
+.content-section .contactme-button{
+    margin: 8%;
+    text-align: center;
+}
+
+
+.content-section .contactme-button a{
+	background-color: #266150;
+	padding:12px 40px;
+	text-decoration: none;
+	color:#fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+    border: none;
+}
+
+.content-section .contactme-button a:hover{
+	background-color: #ddaf94;
+	color:#fff;
+}
+
+.aboutus-definitionlist{
+    margin-bottom: 8%;
+    margin-top: 8%;
+    margin-left: 5%;
+}
+
+.aboutus-definitionlist dl {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    max-width: 670px;
+}
+
+.aboutus-definitionlist dl >* {
+    padding-top: 0.5em;
+}
+
+.aboutus-definitionlist dt {
+    width:30%;
+    font-weight: bold;
+    font-size: 16px;
+    text-align:left;
+    color:#266150;
+}
+
+.aboutus-definitionlist dd {
+    width:60%;
+    padding-left:1em;
+    font-size: 16px;
+    margin-left: 0px;
+    color:#266150;
+}
+
+@media screen and (max-width: 768px){
+    article{
+        width: 80%;
+        display: block;
+        margin:auto;
+        padding-top:50px;
+    }
+    main{
+        height: 200vh;
+        width: auto;
+    }
+    .content-section{
+        float:none;
+        width:100%;
+        display: block;
+        margin:auto;
+    }
+    .image-section{
+        float: none;
+        width: 100%;
+        
+    }
+    .image-section img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin:auto;
+    }
+    .content-section .title{
+        text-align: center;
+        font-size: 28px;
+    }
+    .content-section .contactme-button{
+        text-align: center;
+    }
+    .content-section .contactme-button a{
+        padding:9px 30px;
+    }
+}
+
+/*table*/
+.timetable{
+    margin-left: 27%;
+    margin-top: 10%;
+}
+
+ .timetable td {
+    padding: 8px 10px;
+    color: #266150;
+}
+.timetable th{
+    padding: 8px 10px;
+}
+
+
+.timetable thead tr {
+    background-color: #ddaf94;
+    text-align: left;
+    color: #266150;
+}
+
+.timetable tbody tr:nth-of-type(even) {
+    background-color: #e8cebf;
+}
+.timetable tr th{
+    color: #266150;
+}
+.tableheading {
+    color: #fff;
+}
+
+
+@media screen and (max-width: 768px){
+    article{
+        width: 80%;
+        display: block;
+        margin:auto;
+        padding-top:50px;
+    }
+    main{
+        height: 200vh;
+        width: auto;
+    }
+    .content-section{
+        float:none;
+        width:100%;
+        display: block;
+        margin:auto;
+    }
+    .image-section{
+        float: none;
+        width: 100%;
+        
+    }
+    .image-section img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin:auto;
+    }
+    .content-section .title{
+        text-align: center;
+        font-size: 28px;
+    }
+    .content-section .contactme-button{
+        text-align: center;
+    }
+    .content-section .contactme-button a{
+        padding:9px 30px;
+    }
+}
+
+
+/*footer*/
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    background: #e8cebf;
+    padding: 70px 0 8% 8%;
+    position: relative;    
+    width: 100%;
+    height:260px;
+    bottom: 0;
+    margin-top: auto;
+    
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: #266150;
+    font-weight: 900px;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #266150;
+    text-decoration: none;
+    font-weight: 700px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 2px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,355,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #266150;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*apply page*/
+/*New temporary CSS for errors*/
+#DateError {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+#sync {
+    position: absolute;
+    cursor: pointer;
+    width: 2%;
+    height: 4%;
+    transition: 0.2s ease-in-out;
+}
+
+#sync:hover{
+    width: 2.1%;
+    height: 4.1%;
+    filter: drop-shadow(0px 0px 5px rgb(255, 0, 0));
+}
+
+#RefError {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#fError {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+#lError {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#addr1Error {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#addr2Error {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+#emailError {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+#contactError {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+#ps {
+    color: red;
+    font-weight: bold;
+    margin-left: -10%;
+}
+
+#otherSkillError {
+    color: red;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 12px;
+}
+#note {
+    color: red;
+    font-weight: bold;
+    margin-left: -10%;
+    text-align: center;
+}
+
+#postError {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/**/
+
+.applypage-main{
+    background: url(../images/bg5.png);
+    background-attachment: fixed;
+    padding-left: 27%;
+    padding-top: 6%;
+    height: 190vh;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.applypage-container{
+    max-width: 750px;
+    height: auto;
+    width: 100%;
+    background: #d3a68ce1;
+    padding: 25px 30px;
+    border-radius: 10px;
+    padding-left: 10%;
+}
+
+.applypage-container .title{
+    position: absolute;
+    right: 5%;
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;  
+}
+
+.applypage-container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0%;
+}
+
+form .user-details .input-box{
+    width: 50%;
+}  
+form .user-details .input-box option, .choose{
+    color: #000;
+    border: 2px solid;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 600;
+}
+
+.user-details .input-box input {
+    height: 30px;
+    width: 70%;
+    border-radius: 7px;
+    padding-left: 15px;
+    font-size: 14px;
+    color: #000;
+}
+
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+form .gender-details .catergory{
+    display: flex;    
+    width: 50%;
+    margin: 8px 0 0;
+    justify-content: space-between;
+}
+
+.gender-details .catergory label {
+    display: flex;
+    align-items: center;
+}
+
+.gender{
+    padding: 10px;
+}
+
+.checkboxes{
+    width: 100%;
+}
+
+.skill{
+    margin-left: 5%;
+    padding-top: 1%;
+    font-weight: 600;
+}
+
+.otherskills{
+    display: flex;
+    height: fit-content;
+    width: auto;
+    padding-top: 3%;
+}
+
+.otherskills textarea{
+    border-radius: 10px;
+    color: #000;
+    font-weight: 600;
+    padding-left: 2%;
+    margin-left: 5%;
+}
+
+form .apply-button{
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .apply-button input{
+    margin-top: 4%;
+    margin-right: 100px;
+    height: 60px;
+    width: 500px;
+    outline: none;
+    border-radius: 2px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    background-color: #266150;
+}
+
+form .apply-button input:hover{
+    background-color: #4f4846;
+    color: #ffffff;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/*Job description page*/
+/* Newly added*/
+#refCodeM {
+    font-weight: bolder;
+    font-size: large;
+    color: black;
+    border: none;
+    background-color:  #e8cebf;
+}
+#refCodeHM {
+    font-weight: bolder;
+    font-size: large;
+    color: black;
+    border: none;
+    background-color:  #e8cebf;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+
+.jobdescription{
+    background: #FDF8F5;
+    display: block;
+    margin: auto;
+    padding-top: 3%;
+    height: 610vh;
+}
+
+.jobcontent-section section{
+    width: 100%;
+    min-height: 85vh;
+    background-color: #e8cebf;
+    border-radius: 15px;
+}
+
+.jobcontent-section{
+    float: left;
+    width: 50%;
+    margin: 0 5% 0 5%;
+}
+
+.jobcontent-section .title{
+    text-align: center;
+    margin: 5% 0 0 25%;
+}
+
+.jobcontent-section h1{
+	margin: 2% 5% 5% 5%;
+    color: #266150;
+	font-size: 55px;
+}
+.jobcontent-section p{
+	margin: 2% 5% 5% 5%;
+	font-size: 18px;  
+    color: #266150; 
+}
+.jobcontent-section h2, h3{ 
+    color: #4f4846; 
+}
+.jobcontent-section ul li{
+	margin: 2% 5% 5% 5%;
+	color: #266150;
+	font-size: 18px;    
+}
+.jobcontent-section ol li{
+	margin: 2% 5% 5% 5%;
+	color: #266150;
+	font-size: 18px;    
+}
+.jobdescription1, .jobdescription2{
+    margin: 3% 0% 2% 14%;
+    width: 100%;
+    background-color: #e8cebf;
+    border: none;
+    border-radius: 13px;
+    height: auto;
+    padding: 7%;
+}
+
+.jobdescription-aside{
+    height: 42vh;
+    width: 20%;
+    background: #e8cebf;
+    float: right;
+    margin: 210px 5% 0 2%;
+    border-radius: 13px;
+    padding: 2%;
+}
+
+.jobdescription-aside img{
+    width: 215px;
+}
+
+.apply-btn{
+    width: 180px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 0;
+    background: #266150;
+    border: none;
+    margin-top: 30px;
+    margin-left: 35%;
+    transition: 0.5s ease;
+}
+
+.apply-btn a{
+    text-decoration: none;
+}
+
+.apply-btn:hover{
+    cursor: pointer;
+    background-color: #ddaf94ce;
+    color: rgba(0, 0, 0, 0.753);
+    font-size: 21px;
+}
+
+@media (max-width: 584px){
+    .container{
+        max-width: 100%
+    }
+}
+
+
+
+@media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    } 
+}
+@media(max-width: 574){
+    .footer-col{
+        width: 100%;
+    } 
+}
+
+
+
+/*Enhancement page*/
+
+.enhancements-imagesection img{
+    width: 350px;
+    border-radius: 10px;
+}
+
+.enhancements-section h1{
+	margin: 2% 5% 5% 5%;
+	color:#4f4846;
+	font-size: 55px;
+    text-align: center;
+}
+.enhancements-section h2{
+    color: #4f4846;
+    margin-left: 5%;
+}
+.enhancements-section p{
+	margin: 2% 5% 0% 5%;
+	color: #266150;
+    font-weight: 700px;
+	font-size: 18px;    
+}
+
+.enhancements{
+    background: #fdf8f5;
+    display: block;
+    margin: auto;
+    height: 240vh;
+    padding: 5%;
+}
+
+.enhancements-section{
+    width: 70%;
+    margin: 0% 0 0% 14%;
+   
+    
+}
+
+.enhancements-section section{
+    width: 100%;
+}
+
+.enhancements-section iframe{
+   margin-left:  12%;
+   margin-top: 5%;
+   width: 560px;
+   height: 315px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
